@@ -6,7 +6,7 @@ import plotly.express as px
 from datetime import datetime
 
 st.set_page_config(
-    page_title="UPHS-JONELTA Social Media Dashboard",
+    page_title="UPHS-JONELTA Social Media Dashboard-prototype",
     page_icon="📊",
     layout="wide"
 )
