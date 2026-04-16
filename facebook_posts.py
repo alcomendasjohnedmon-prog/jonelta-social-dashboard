@@ -15,7 +15,7 @@ PAGE_ID = "111665584503975"  # Replace with your actual page ID if needed
 PAGE_NAME = "Statistician for Undergraduate/ Graduate Level Thesis"
 
 GRAPH_API_BASE = "https://graph.facebook.com/v25.0"
-TOKEN = "EAAeRoPHMTT8BRB2Q6YZAHQvmckQZBDkfYRZBHaTy3AAgRDmD4kjknuK8KeN8yO8nNCb0UEow2ZC9xAyrxJN1ZCZCFO0om2bbb2u2IrkVElZCC8FJ9XRwgxzZCrvROZCnZAcM1OfZCHAHeCdE5QQrwoxgbuumzdfgFcRqED6qJvhQfA7dBGrUrZAdZApIb7ULJ0uuaZCSgY7KCw6YV0taugalSaEipxaHYLZC3bn3NdEBsehQP234PbDlgbFPjvAg4DDIZB3PtFLbRRBWngTau5MZD"
+TOKEN = st.secrets["FB_TOKEN"]
 PAGE_ACCOUNT_FIELDS = "id,name,category,category_list,tasks,access_token"
 PAGE_POST_FIELDS = (
     "id,message,created_time,reactions.summary(true),"
