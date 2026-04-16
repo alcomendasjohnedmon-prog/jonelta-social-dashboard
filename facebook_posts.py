@@ -76,7 +76,7 @@ def check_token_health(user_token):
         return None, None, False
 
 # ---------------- UI HEADER ----------------
-st.title("UPHS-JONELTA Social Media Engagement Dashboard")
+st.title("UPHS-JONELTA Social Media Engagement Dashboard-prototype")
 
 st.markdown("""
 ### A centralized, polished view of page engagement, sentiment, and reaction trends.
