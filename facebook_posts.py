@@ -41,18 +41,26 @@ PAGE_ACCOUNTS_RAW = {}
 PAGE_POSTS_RAW = {}
 
 # ---------------- TOKEN HEALTH CHECK ----------------
-def check_token_health(token):
+def check_token_health(user_token):
+    APP_ID = st.secrets["APP_ID"]
+    APP_SECRET = st.secrets["APP_SECRET"]
+
+    app_token = f"{APP_ID}|{APP_SECRET}"
+
     url = "https://graph.facebook.com/debug_token"
 
     params = {
-        "input_token": token,
-        "access_token": token
+        "input_token": user_token,
+        "access_token": app_token
     }
 
     try:
         res = requests.get(url, params=params).json()
-        data = res.get("data", {})
 
+        if "error" in res:
+            return None, None, False
+
+        data = res.get("data", {})
         expires_at = data.get("expires_at")
         is_valid = data.get("is_valid", False)
 
@@ -63,9 +71,9 @@ def check_token_health(token):
         days_left = (expiry_date - datetime.now()).days
 
         return days_left, expiry_date, is_valid
+
     except:
         return None, None, False
-
 
 # ---------------- UI HEADER ----------------
 st.title("UPHS-JONELTA Social Media Engagement Dashboard")
