@@ -11,7 +11,7 @@ st.set_page_config(
     layout="wide"
 )
 
-PAGE_ID = "111665584503975"  # Replace with your actual page ID if needed
+PAGE_ID = "111665584503975"  # Replace with the actual page ID if needed
 PAGE_NAME = "Statistician for Undergraduate/ Graduate Level Thesis"
 
 GRAPH_API_BASE = "https://graph.facebook.com/v25.0"
