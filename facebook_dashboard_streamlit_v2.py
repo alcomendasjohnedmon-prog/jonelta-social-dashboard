@@ -27,7 +27,10 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
+PAGE_ID = "111665584503975"
+PAGE_NAME = "Statistician for Undergraduate/ Graduate Level Thesis"
 GRAPH_API_BASE = "https://graph.facebook.com/v25.0"
+TOKEN = st.secrets["FB_TOKEN"]
 DEFAULT_LOOKBACK_DAYS = 30
 DEFAULT_POST_LIMIT = 100
 DEFAULT_COMMENT_LIMIT_PER_POST = 150
